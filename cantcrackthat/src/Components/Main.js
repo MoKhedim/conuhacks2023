@@ -1,14 +1,15 @@
 import React from 'react';
-
+import ReactDOM from 'react-dom/client';
+import Password from './Password';
 
 function Main() {
     return (
         <div>
             <div>
-                MARC
+                THOMAS
             </div>
             <div>
-                THOMAS
+                MARC
             </div>
         </div>
     )

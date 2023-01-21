@@ -1,4 +1,5 @@
-import Password from './components/Main.js';
+import 'bulma/css/bulma.min.css'
+import Password from './Components/Main.js';
 
 function App() {
   return (

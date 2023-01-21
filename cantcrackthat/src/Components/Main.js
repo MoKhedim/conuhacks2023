@@ -1,15 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import Password from './Password';
+import PasswordGeneration from './PasswordGeneration';
 
 function Main() {
     return (
-        <div>
-            <div>
-                THOMAS
-            </div>
-            <div>
-                MARC
+        <div className="container pt-5">
+            <div className="content">
+                <div className="box">
+                    <div className="columns">
+                        <PasswordGeneration />
+                        <Password />
+                    </div>
+                </div>
             </div>
         </div>
     )

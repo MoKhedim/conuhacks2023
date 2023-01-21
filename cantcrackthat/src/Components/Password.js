@@ -11,6 +11,7 @@ function Password() {
     return (
         <div>
             <input type="password" placeholder="Enter Password" onChange={onChangePassword}/>
+            LOL
         </div>
     )
 }

@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 
 function Main() {
     return (
         <div>
             <div>
-                THOMAS
+                MARC
             </div>
             <div>
-                MARC
+                THOMAS
             </div>
         </div>
     )

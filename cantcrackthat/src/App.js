@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Password from './Password.js';
+import Password from './Components/Main.js';
 
 function App() {
   return (

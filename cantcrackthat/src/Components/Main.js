@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function Password() {
+function Main() {
     return (
         <div>
             <div>
@@ -15,4 +15,4 @@ function Password() {
 }
 
 
-export default Password;
+export default Main;

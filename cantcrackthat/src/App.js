@@ -1,8 +1,9 @@
-import Password from './components/Main.js';
+import Main from './Components/Main.js';
+
 
 function App() {
   return (
-    <Password />
+    <Main />
   );
 }
 

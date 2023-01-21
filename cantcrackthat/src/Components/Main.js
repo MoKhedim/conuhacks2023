@@ -6,7 +6,7 @@ function Main() {
     return (
         <div>
             <div>
-                THOMAS
+                <Password/>
             </div>
             <div>
                 MARC

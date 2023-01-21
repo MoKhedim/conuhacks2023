@@ -23,6 +23,7 @@ function Password() {
     }
 
     return (
+      <div>
         <div className="column" id="passwordContainer">
             <div id="pass-view">
                 <input className="input is-primary" type={passwordShown ? "text" : "password"} placeholder="Enter Password" onChange={onChangePassword}/>
@@ -81,7 +82,7 @@ function Password() {
           The password has at least one uppercase letter
         </p>
         <p
-          className={`help is-${/[a-z]/.test(password) ? "success" : "danger"}`}
+          className={`help is-${/[a-z]/g.test(password) ? "success" : "danger"}`}
         >
           {/[a-z]/.test(password) && <i className="fas fa-check-circle" />}
           {/[a-z]/.test(password) || (

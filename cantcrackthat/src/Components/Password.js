@@ -37,7 +37,70 @@ function Password() {
                 <progress className="progress is-danger" value={score*25} max="100">15%</progress>
             </div>
         </div>
-    )
+      <div
+        style={{
+          marginTop: "20px",
+          width: "300px",
+          border: "black",
+          padding: "0px",
+          margin: "5px",
+        }}
+      >
+        <p>Recommendations to make your password stronger:</p>
+        <p
+          className={`help is-${
+            /^.{8,}$/.test(password) ? "success" : "danger"
+          }`}
+        >
+          {/^.{8,}$/.test(password) && <i className="fas fa-check-circle" />}
+          {/^.{8,}$/.test(password) || (
+            <i className="fas fa-exclamation-circle" />
+          )}
+          The password is at least 8 characters long
+        </p>
+        <p
+          className={`help is-${
+            /[!@#$%&*()[\]]/.test(password) ? "success" : "danger"
+          }`}
+        >
+          {/[!@#$%&*()[\]]/.test(password) && (
+            <i className="fas fa-check-circle" />
+          )}
+          {/[!@#$%&*()[\]]/.test(password) || (
+            <i className="fas fa-exclamation-circle" />
+          )}
+          The password has at least one special character
+        </p>
+        <p
+          className={`help is-${/[A-Z]/.test(password) ? "success" : "danger"}`}
+        >
+          {/[A-Z]/.test(password) && <i className="fas fa-check-circle" />}
+          {/[A-Z]/.test(password) || (
+            <i className="fas fa-exclamation-circle" />
+          )}
+          The password has at least one uppercase letter
+        </p>
+        <p
+          className={`help is-${/[a-z]/.test(password) ? "success" : "danger"}`}
+        >
+          {/[a-z]/.test(password) && <i className="fas fa-check-circle" />}
+          {/[a-z]/.test(password) || (
+            <i className="fas fa-exclamation-circle" />
+          )}
+          The password has at least one lowercase letter
+        </p>
+        <p
+          className={`help is-${/[0-9]/.test(password) ? "success" : "danger"}`}
+        >
+          {/[0-9]/.test(password) && <i className="fas fa-check-circle" />}
+          {/[0-9]/.test(password) || (
+            <i className="fas fa-exclamation-circle" />
+          )}
+          The password has at least one digit
+        </p>
+      </div>
+    </div>
+  );
 }
 
-export default Password
+export default Password;

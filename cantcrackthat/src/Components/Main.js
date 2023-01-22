@@ -14,7 +14,7 @@ function Main() {
     <div className="container pt-5 personal-font">
       <div className="main-container">
         <div className="our-title">
-          <h1 className="title"> CAN'T CRACK THAT </h1>
+          <h1 className="title personal-grad"> CAN'T CRACK THAT </h1>
         </div>
         <div className="parent-container">
           <div

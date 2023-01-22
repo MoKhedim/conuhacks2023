@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import "../Password.css"
-import PasswordGeneration from './PasswordGeneration';
-import Main from './Main';
 
 function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, crackedInt, setCrackedInt, generatedPass, setGeneratedPass}) {
     const [password, setPassword] = useState("");

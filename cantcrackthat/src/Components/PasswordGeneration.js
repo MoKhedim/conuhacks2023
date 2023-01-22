@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Password from "./Password";
 const alphabet = require('alphabet');
 
 export default function PasswordGeneration(props) {
@@ -22,14 +23,15 @@ export default function PasswordGeneration(props) {
     function handleChangeLowerCases(e) { e.target.value === "true" ? setLowerCases(true) : setLowerCases(false) }
     function handleChangeHasSpecialCharacters(e) { e.target.value === "true" ? setHasSpecialCharacters(true) : setHasSpecialCharacters(false) }
     
-    // Confirm button to switch to Password component
+    // Confirm button to switch and send generated password to Password component
     function confirm() {
         props.setPassOrGen(false);
         props.setGeneratedPass(password);
-        console.log("hello" + props.generatedPass)
-        console.log("hello" + props.generatedPass)
+    }
 
-
+    // Return button to switch to Password component
+    function comeback() {
+        props.setPassOrGen(false);
     }
     
 
@@ -95,7 +97,7 @@ export default function PasswordGeneration(props) {
             <button className="button is-primary" onClick={generatePassword}>Generate Password</button>
             <p>{password}</p>
             <button onClick={confirm}>Confirm</button>
-            <button onClick={confirm}>Return</button>
+            <button onClick={comeback}>Return</button>
 
 
             {/* Length */}

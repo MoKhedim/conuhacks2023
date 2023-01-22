@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import "../Password.css"
 import PasswordGeneration from './PasswordGeneration';
 
-function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime}) {
+function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, crackedInt, setCrackedInt}) {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     var zxcvbn = require('zxcvbn');
@@ -13,6 +13,8 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime}) {
         setPassword(event.target.value);
         //console.log((zxcvbn(event.target.value).score));
         setCrackedTime("Cracked in " + (zxcvbn(event.target.value).crack_times_display).offline_slow_hashing_1e4_per_second);
+        //set CrackedInt to the time it takes to crack in days
+        setCrackedInt(parseInt(((zxcvbn(event.target.value).crack_times_seconds).offline_slow_hashing_1e4_per_second)/3700));
         setScore(zxcvbn(event.target.value).score);
 
         console.log(score)

@@ -60,6 +60,7 @@ export default function Stats(crackedTime) {
     labels: [""],
     datasets: [
       {
+        label: "Hours needed to crack your password",
         data: [crackedTime.crackedTime],
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",

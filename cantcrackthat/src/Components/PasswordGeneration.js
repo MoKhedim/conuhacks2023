@@ -150,6 +150,7 @@ export default function PasswordGeneration(props) {
           style={{ marginLeft: "10px" }}
           className="button is-info"
           onClick={confirm}
+          disabled={password === ""}
         >
           Confirm
         </button>

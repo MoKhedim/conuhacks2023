@@ -38,7 +38,7 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, cracked
         <div className="column" id="passwordContainer">
             <div id="pass-view">
                 <button onClick={generate} id="generate">Generate</button>
-                <input className="input is-primary is-size-7" type={passwordShown ? "text" : "password"} placeholder="Enter Password" onChange={onChangePassword}/>
+                <input className="input is-primary is-size-7" type={passwordShown ? "text" : "password"} placeholder="Enter Password" value={generatedPass} onChange={onChangePassword}/>
                 <button onClick={viewPassword} id="view">VIEW</button>
             </div>
 

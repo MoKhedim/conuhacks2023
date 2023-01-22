@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import "../Password.css"
 import PasswordGeneration from './PasswordGeneration';
 
-function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, crackedInt, setCrackedInt}) {
+function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, crackedInt, setCrackedInt, generatedPass}) {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     var zxcvbn = require('zxcvbn');
     const [score, setScore] = useState("");
 
     function onChangePassword(event) {
-        setPassword(event.target.value);
+        if (generatedPass) {
+            console.log("HELLO")
+            setPassword(generatedPass);
+        } else {
+            setPassword(event.target.value);
+        }
         //console.log((zxcvbn(event.target.value).score));
         setCrackedTime("Cracked in " + (zxcvbn(event.target.value).crack_times_display).offline_slow_hashing_1e4_per_second);
         //set CrackedInt to the time it takes to crack in days
@@ -21,6 +26,7 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, cracked
 
     function viewPassword() {
         setPasswordShown(!passwordShown);
+        alert(generatedPass)
     }
 
     function generate() {

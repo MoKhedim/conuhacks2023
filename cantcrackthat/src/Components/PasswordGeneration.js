@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 const alphabet = require('alphabet');
 
-export default function PasswordGeneration() {
+export default function PasswordGeneration(props) {
     const numberArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     const specialCharacters = [
         "!", "@", "#", "$", "%", "^", "&", "*", "(", ")",
@@ -21,6 +21,17 @@ export default function PasswordGeneration() {
     function handleChangeUpperCases(e) { e.target.value === "true" ? setUpperCases(true) : setUpperCases(false) }
     function handleChangeLowerCases(e) { e.target.value === "true" ? setLowerCases(true) : setLowerCases(false) }
     function handleChangeHasSpecialCharacters(e) { e.target.value === "true" ? setHasSpecialCharacters(true) : setHasSpecialCharacters(false) }
+    
+    // Confirm button to switch to Password component
+    function confirm() {
+        props.setPassOrGen(false);
+        props.setGeneratedPass(password);
+        console.log("hello" + props.generatedPass)
+        console.log("hello" + props.generatedPass)
+
+
+    }
+    
 
     function generatePassword() {
         if (!numbers && !upperCases && !lowerCases && selectedCharacters.length < 1) return 
@@ -83,6 +94,9 @@ export default function PasswordGeneration() {
         <div className="column is-half block">
             <button className="button is-primary" onClick={generatePassword}>Generate Password</button>
             <p>{password}</p>
+            <button onClick={confirm}>Confirm</button>
+            <button onClick={confirm}>Return</button>
+
 
             {/* Length */}
             <div className="field">

@@ -7,6 +7,8 @@ function Main() {
   const [passOrGen, setPassOrGen] = useState(false);
   const [crackedTime, setCrackedTime] = useState("");
   const [crackedInt, setCrackedInt] = useState(0);
+  const [generatedPass, setGeneratedPass] = useState("");
+
   return (
     <div className="container pt-5">
       <div className="main-container">
@@ -16,9 +18,9 @@ function Main() {
         <div className="parent-container">
           <div className="children-container child-left">
             {!passOrGen ? (
-              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime} crackedInt={crackedInt} setCrackedInt={setCrackedInt} />
+              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime} crackedInt={crackedInt} setCrackedInt={setCrackedInt} generatedPass={generatedPass}/>
             ) : (
-              <PasswordGeneration />
+              <PasswordGeneration passOrGen={passOrGen} setPassOrGen={setPassOrGen} generatedPass={generatedPass} setGeneratedPass={setGeneratedPass}/>
             )}
           </div>
           <div className="children-container child-right">

@@ -6,7 +6,6 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, cracked
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     var zxcvbn = require('zxcvbn');
-    const [crackedTime, setCrackedTime] = useState("");
     const [score, setScore] = useState("");
 
     function onChangePassword(event) {
@@ -25,7 +24,7 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime, cracked
     }
 
     function generate() {
-        props.setPassOrGen(true);
+        setPassOrGen(true);
     }
 
     return (

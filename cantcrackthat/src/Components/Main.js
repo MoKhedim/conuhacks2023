@@ -51,6 +51,7 @@ function Main() {
         </div>
       </div>
       < Stats />
+      
     </div>
   );
 }

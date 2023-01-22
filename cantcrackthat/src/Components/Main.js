@@ -43,7 +43,7 @@ function Main() {
           </div>
           <div className="middle-line"></div>
           <div
-            style={{ marginLeft: "100px" }}
+            //style={{ marginLeft: "100px" }}
             className="children-container child-right"
           >
             <UserStats crackedTime={crackedInt} />

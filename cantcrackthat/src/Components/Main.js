@@ -9,8 +9,11 @@ function Main() {
   const [crackedInt, setCrackedInt] = useState(0);
   return (
     <div className="container pt-5">
-      <div className="content">
-        <div className="main-container">
+      <div className="main-container">
+        <div className="our-title">
+            <h1 className="title"> CAN'T CRACK THAT </h1>
+        </div>
+        <div className="parent-container">
           <div className="children-container child-left">
             {!passOrGen ? (
               <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime} crackedInt={crackedInt} setCrackedInt={setCrackedInt} />

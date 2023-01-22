@@ -135,7 +135,7 @@ export default function PasswordGeneration(props) {
 
   return (
     <div className="block">
-      <div style={{ display: "flex", marginBottom: "10px"}}>
+      <div style={{ display: "flex", marginBottom: "10px" }}>
         <button className="button is-danger" onClick={comeback}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
@@ -154,7 +154,7 @@ export default function PasswordGeneration(props) {
           Confirm
         </button>
       </div>
-      <p style={{ margin: "20px"}}>{password}</p>
+      <p style={{ margin: "20px" }}>{password}</p>
       <div className="fields-container" style={{ display: "flex" }}>
         <div className="fields-section">
           {/* Your fields */}

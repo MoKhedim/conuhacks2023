@@ -16,7 +16,10 @@ function Main() {
           <h1 className="title"> CAN'T CRACK THAT </h1>
         </div>
         <div className="parent-container">
-          <div style={{marginRight : "100px"}} className="children-container child-left">
+          <div
+            style={{ marginRight: "100px" }}
+            className="children-container child-left"
+          >
             {!passOrGen ? (
               <Password
                 setPassOrGen={setPassOrGen}
@@ -38,7 +41,10 @@ function Main() {
             )}
           </div>
           <div className="middle-line"></div>
-          <div style={{marginLeft : "100px"}} className="children-container child-right">
+          <div
+            style={{ marginLeft: "100px" }}
+            className="children-container child-right"
+          >
             <UserStats crackedTime={crackedInt} />
           </div>
         </div>

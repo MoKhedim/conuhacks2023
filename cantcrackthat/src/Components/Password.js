@@ -69,11 +69,7 @@ function Password({
     <div className="block">
       <div className="column" id="passwordContainer">
         <div id="pass-view">
-          <button
-            className="button is-info"
-            onClick={generate}
-            id="generate"
-          >
+          <button className="button is-info" onClick={generate} id="generate">
             Generate
           </button>
           <input
@@ -90,7 +86,9 @@ function Password({
         </div>
 
         <div>
-          <p className="small-text">{password.length === 0 ? crackedTime == "" : crackedTime}</p>
+          <p className="small-text">
+            {password.length === 0 ? crackedTime == "" : crackedTime}
+          </p>
         </div>
 
         <div>
@@ -121,7 +119,9 @@ function Password({
             /^.{8,}$/.test(password || generatedPass) ? "success" : "danger"
           }`}
         >
-          {/^.{8,}$/.test(password || generatedPass) && <i className="fas fa-check-circle" />}
+          {/^.{8,}$/.test(password || generatedPass) && (
+            <i className="fas fa-check-circle" />
+          )}
           {/^.{8,}$/.test(password || generatedPass) || (
             <i className="fas fa-exclamation-circle" />
           )}
@@ -129,21 +129,29 @@ function Password({
         </p>
         <p
           className={`small-text help is-${
-            /[!@#$%&*()[\]]/.test(password || generatedPass) ? "success" : "danger"
+            /[!@#\$%\^&\*\(\)\_\-\+\=\{\}\[\]\\\|:\";'<>,\.\?\/]/.test(
+              password || generatedPass
+            )
+              ? "success"
+              : "danger"
           }`}
         >
-          {/[!@#$%&*()[\]]/.test(password || generatedPass) && (
-            <i className="fas fa-check-circle" />
-          )}
-          {/[!@#$%&*()[\]]/.test(password || generatedPass) || (
-            <i className="fas fa-exclamation-circle" />
-          )}
+          {/[!@#\$%\^&\*\(\)\_\-\+\=\{\}\[\]\\\|:\";'<>,\.\?\/]/.test(
+            password || generatedPass
+          ) && <i className="fas fa-check-circle" />}
+          {/[!@#\$%\^&\*\(\)\_\-\+\=\{\}\[\]\\\|:\";'<>,\.\?\/]/.test(
+            password || generatedPass
+          ) || <i className="fas fa-exclamation-circle" />}
           The password has at least one special character
         </p>
         <p
-          className={`small-text help is-${/[A-Z]/.test(password || generatedPass) ? "success" : "danger"}`}
+          className={`small-text help is-${
+            /[A-Z]/.test(password || generatedPass) ? "success" : "danger"
+          }`}
         >
-          {/[A-Z]/.test(password || generatedPass) && <i className="fas fa-check-circle" />}
+          {/[A-Z]/.test(password || generatedPass) && (
+            <i className="fas fa-check-circle" />
+          )}
           {/[A-Z]/.test(password || generatedPass) || (
             <i className="fas fa-exclamation-circle" />
           )}
@@ -154,16 +162,22 @@ function Password({
             /[a-z]/g.test(password || generatedPass) ? "success" : "danger"
           }`}
         >
-          {/[a-z]/.test(password || generatedPass) && <i className="fas fa-check-circle" />}
+          {/[a-z]/.test(password || generatedPass) && (
+            <i className="fas fa-check-circle" />
+          )}
           {/[a-z]/.test(password || generatedPass) || (
             <i className="fas fa-exclamation-circle" />
           )}
           The password has at least one lowercase letter
         </p>
         <p
-          className={`small-text help is-${/[0-9]/.test(password || generatedPass) ? "success" : "danger"}`}
+          className={`small-text help is-${
+            /[0-9]/.test(password || generatedPass) ? "success" : "danger"
+          }`}
         >
-          {/[0-9]/.test(password || generatedPass) && <i className="fas fa-check-circle" />}
+          {/[0-9]/.test(password || generatedPass) && (
+            <i className="fas fa-check-circle" />
+          )}
           {/[0-9]/.test(password || generatedPass) || (
             <i className="fas fa-exclamation-circle" />
           )}

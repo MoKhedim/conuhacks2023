@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import "../Password.css"
 import PasswordGeneration from './PasswordGeneration';
 
@@ -36,7 +35,7 @@ function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime}) {
             </div>
 
             <div>
-                <p>{password.length == 0 ? crackedTime == "" : crackedTime}</p>
+                <p>{password.length === 0 ? crackedTime == "" : crackedTime}</p>
             </div>
 
             <div>

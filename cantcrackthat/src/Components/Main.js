@@ -18,7 +18,7 @@ function Main() {
         <div className="parent-container">
           <div className="children-container child-left">
             {!passOrGen ? (
-              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime} crackedInt={crackedInt} setCrackedInt={setCrackedInt} generatedPass={generatedPass}/>
+              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime} crackedInt={crackedInt} setCrackedInt={setCrackedInt} generatedPass={generatedPass} setGeneratedPass={setGeneratedPass}/>
             ) : (
               <PasswordGeneration passOrGen={passOrGen} setPassOrGen={setPassOrGen} generatedPass={generatedPass} setGeneratedPass={setGeneratedPass}/>
             )}

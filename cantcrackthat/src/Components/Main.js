@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Password from "./Password";
 import PasswordGeneration from "./PasswordGeneration";
 import UserStats from "./UserStats";
+import Stats  from "./Stats";
 
 function Main() {
   const [passOrGen, setPassOrGen] = useState(false);
@@ -29,6 +30,7 @@ function Main() {
           <div className="children-container"></div>
         </div>
       </div>
+      < Stats />
     </div>
   );
 }

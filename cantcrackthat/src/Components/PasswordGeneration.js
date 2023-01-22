@@ -133,6 +133,10 @@ export default function PasswordGeneration(props) {
     setPassword(newPassword);
   }
 
+  function selectAll() {
+    setSelectedCharacters(specialCharacters)
+  }
+
   return (
     <div className="block">
       <div style={{ display: "flex", marginBottom: "10px" }}>
@@ -298,6 +302,11 @@ export default function PasswordGeneration(props) {
 
           {hasSpecialCharacters && (
             <div className="box">
+              <div className="buttons">
+                <div className="button is-success small-text mb-5" onClick={selectAll}>Select all</div>
+                <div className="button is-danger small-text mb-5" onClick={e => setSelectedCharacters([])}>Select None</div>
+              </div>
+
               <div className="columns is-multiline">
                 {specialCharacters.map((char, i) => {
                   return (

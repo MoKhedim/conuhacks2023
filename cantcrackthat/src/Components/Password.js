@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import "../Password.css"
+import PasswordGeneration from './PasswordGeneration';
 
-function Password() {
+function Password(props) {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     var zxcvbn = require('zxcvbn');
@@ -22,10 +23,15 @@ function Password() {
         setPasswordShown(!passwordShown);
     }
 
+    function generate() {
+        props.setPassOrGen(true);
+    }
+
     return (
       <div>
         <div className="column" id="passwordContainer">
             <div id="pass-view">
+                <button onClick={generate} id="generate">Ran</button>
                 <input className="input is-primary" type={passwordShown ? "text" : "password"} placeholder="Enter Password" onChange={onChangePassword}/>
                 <button onClick={viewPassword} id="view">VIEW</button>
             </div>

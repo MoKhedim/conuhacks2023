@@ -10,7 +10,7 @@ function Main() {
   const [generatedPass, setGeneratedPass] = useState("");
 
   return (
-    <div className="container pt-5">
+    <div className="container pt-5 personal-font"> 
       <div className="main-container">
         <div className="our-title">
             <h1 className="title"> CAN'T CRACK THAT </h1>

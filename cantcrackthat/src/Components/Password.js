@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom/client';
 import "../Password.css"
 import PasswordGeneration from './PasswordGeneration';
 
-function Password(props) {
+function Password({passOrGen, setPassOrGen, crackedTime, setCrackedTime}) {
     const [password, setPassword] = useState("");
     const [passwordShown, setPasswordShown] = useState(false);
     var zxcvbn = require('zxcvbn');
-    const [crackedTime, setCrackedTime] = useState("");
     const [score, setScore] = useState("");
 
     function onChangePassword(event) {
@@ -24,7 +23,7 @@ function Password(props) {
     }
 
     function generate() {
-        props.setPassOrGen(true);
+        setPassOrGen(true);
     }
 
     return (

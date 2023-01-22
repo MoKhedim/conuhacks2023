@@ -4,13 +4,14 @@ import PasswordGeneration from "./PasswordGeneration";
 
 function Main() {
   const [passOrGen, setPassOrGen] = useState(false);
+  const [crackedTime, setCrackedTime] = useState("");
   return (
     <div className="container pt-5">
       <div className="content">
         <div className="main-container">
           <div className="children-container child-left">
             {!passOrGen ? (
-              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} />
+              <Password setPassOrGen={setPassOrGen} passOrGen={passOrGen} crackedTime={crackedTime} setCrackedTime={setCrackedTime}/>
             ) : (
               <PasswordGeneration />
             )}

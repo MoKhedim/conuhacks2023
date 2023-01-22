@@ -6,10 +6,13 @@ function Main() {
     return (
         <div className="container pt-5">
             <div className="content">
-                <div className="box">
-                    <div className="columns">
-                        <PasswordGeneration />
+                <div className="main-container">
+                    <div className="children-container child-left">
                         <Password />
+                    </div>
+                    
+                    <div className="children-container">
+                        <PasswordGeneration />
                     </div>
                 </div>
             </div>

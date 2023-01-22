@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, {useState} from 'react';
 
 
 function Password() {
     const [password, setPassword] = useState("")
+
     function onChangePassword(event) {
         setPassword(event.target.value);
     }

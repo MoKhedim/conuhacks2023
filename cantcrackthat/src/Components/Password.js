@@ -80,7 +80,7 @@ function Password({
             value={generatedPass}
             onChange={onChangePassword}
           />
-          <button onClick={viewPassword} id="view">
+          <button  className="button is-info" onClick={viewPassword} id="view">
             <FontAwesomeIcon icon={passwordShown ? faEye : faEyeSlash} />
           </button>
         </div>

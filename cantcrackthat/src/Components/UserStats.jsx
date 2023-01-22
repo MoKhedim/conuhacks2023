@@ -68,7 +68,7 @@ export default function Stats(crackedTime) {
         <div>
             <Bar options={options} data={data}/>
             {console.log(crackedTime.crackedTime)}
-            <h1 className='subtitle'>
+            <h1 className='small-text subtitle'>
             The graph visualizes how many hours it 
             would approximately take to crack your password
             </h1>

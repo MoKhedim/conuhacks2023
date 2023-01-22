@@ -111,7 +111,7 @@ function Password({
           padding: "0px",
         }}
       >
-        <p class="has-text-weight-bold">
+        <p className="has-text-weight-bold">
           Recommendations to make your password stronger:
         </p>
         <p
